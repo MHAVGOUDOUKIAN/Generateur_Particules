@@ -104,13 +104,13 @@ void Particule_Ball::processCollision(void) // Rebond entre la balle et un suppo
         m_pos.y = m_radius;
         m_vit.y = m_vit.y*(-1);
     }
-    else if(m_pos.y + m_radius > 1080) {
+    else if(m_pos.y + m_radius > sf::VideoMode::getDesktopMode().height) {
         if(m_vit.y > 0 && m_vit.y < 5) {// Cas ou la balle ne rebondit plus
-            m_pos.y = 1080-m_radius;
+            m_pos.y = sf::VideoMode::getDesktopMode().height-m_radius;
             m_vit.y = 0;
         }
         else { // Cas du rebond
-            m_pos.y = 1080-m_radius;
+            m_pos.y = sf::VideoMode::getDesktopMode().height-m_radius;
             m_vit.y = m_vit.y*(-1) * 0.65 /* Facteur d'Adhérence du sol */;
         }
     }
@@ -119,8 +119,8 @@ void Particule_Ball::processCollision(void) // Rebond entre la balle et un suppo
         m_pos.x = m_radius;
         m_vit.x = m_vit.x * (-1);
     } // Rebond sur les cotés
-    else if(m_pos.x + m_radius > 1920) {
-        m_pos.x = 1920 - m_radius;
+    else if(m_pos.x + m_radius > sf::VideoMode::getDesktopMode().height-m_radius) {
+        m_pos.x = sf::VideoMode::getDesktopMode().height-m_radius - m_radius;
         m_vit.x = m_vit.x * (-1);
     }
     if(abs(m_vit.x) < 10) {
