@@ -40,3 +40,5 @@ Ce programme en C++ (+ librairie graphique SFML) permet de générer différents
 
 ## Auteur
   Maxime HAVGOUDOUKIAN
+  
+### Status du projet - Terminé
