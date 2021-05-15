@@ -37,8 +37,3 @@ Ce programme en C++ (+ librairie graphique SFML) permet de générer différents
     Clic droit -> Changer le modèles des particules
 
 ( Pour le moment, il y a 4 modèles disponibles dans cette version du programme )
-
-## Auteur
-  Maxime HAVGOUDOUKIAN
-  
-### Status du projet - Terminé
